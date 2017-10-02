@@ -8,10 +8,11 @@
 
 import UIKit
 
-protocol FuncProtocol {
+protocol FuncProtocol: class {
     func startFor(_ graphic : Graphics) -> Double //Inicio
     func endFor(_ graphic : Graphics) -> Double //Final
     func nextPoint(_ graphic : Graphics, pointAt index: Double) -> FunctionPoint
+    func pointOfInterest(_ graphic: Graphics) -> [FunctionPoint]
 }
 
 struct FunctionPoint {
@@ -20,15 +21,71 @@ struct FunctionPoint {
 }
 
 
+@IBDesignable
 class Graphics: UIView {
-    var dataSource : FuncProtocol!
-    var scaleX = 1.0
-    var scaleY = 1.0
     
+    @IBInspectable
+    var lineWidth : Double = 2.0
+    
+    @IBInspectable
+    var functionColor : UIColor = UIColor.red
+    
+    @IBInspectable
+    var textX : String = "x"
+    
+    @IBInspectable
+    var textY : String = "y"
+    
+    @IBInspectable
+    var scaleX : Double = 1.0 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    @IBInspectable
+    var scaleY : Double = 1.0 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable
+    var resolution : Double = 50 {
+        didSet{
+            setNeedsDisplay()
+        }
+    }
+    
+#if TARGET_INTERFACE_BUILDER
+    var dataSource : FuncProtocol!
+#else
+    weak var dataSource: FuncProtocol!
+#endif
+    
+    /// Data source falso para que lo use el Interface Builder en tiempo de desarrollo.
+    override func prepareForInterfaceBuilder() {
+        
+        class FakeDataSource :FuncProtocol{
+            
+            func startFor(_ graphic: Graphics) -> Double  {return 0.0}
+            
+            func endFor(_ graphic: Graphics) -> Double {return 200.0}
+            
+            func nextPoint(_ graphic: Graphics, pointAt index: Double) -> FunctionPoint {
+                return FunctionPoint(x: index , y: index.truncatingRemainder(dividingBy: 25))
+            }
+            func pointOfInterest(_ graphic: Graphics) -> [FunctionPoint]{
+                return []
+            }
+        }
+        
+        dataSource = FakeDataSource()
+    }
     
     override func draw(_ rect: CGRect) {
         axis()
         trajectory()
+        drawPOI()
     }
     
     private func axis() {
@@ -96,4 +153,17 @@ class Graphics: UIView {
         
     }
     
+    private func drawPOI() {
+        let poi = dataSource.pointOfInterest(self)
+        
+        for p in poi {
+            let x = scalingX(p.x)
+            let y = scalingY(p.y)
+            let path = UIBezierPath(ovalIn: CGRect(x: x-4, y: y-4, width: 8, height: 8))
+            
+            UIColor.blue.set()
+            path.stroke()
+            path.fill()
+        }
+    }
 }
