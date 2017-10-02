@@ -56,18 +56,20 @@ class Graphics: UIView {
         }
     }
     
-#if TARGET_INTERFACE_BUILDER
+//#if TARGET_INTERFACE_BUILDER
     var dataSource : FuncProtocol!
-#else
+/*#else
     weak var dataSource: FuncProtocol!
 #endif
     
-    /// Data source falso para que lo use el Interface Builder en tiempo de desarrollo.
+    /// DataSource falso para que lo use el Interface Builder en tiempo de desarrollo.
     override func prepareForInterfaceBuilder() {
         
         class FakeDataSource :FuncProtocol{
             
-            func startFor(_ graphic: Graphics) -> Double  {return 0.0}
+            func startFor(_ graphic: Graphics) -> Double  {
+                print("Entra en start de FakeDatasSource")
+                return 0.0}
             
             func endFor(_ graphic: Graphics) -> Double {return 200.0}
             
@@ -80,7 +82,7 @@ class Graphics: UIView {
         }
         
         dataSource = FakeDataSource()
-    }
+    }*/
     
     override func draw(_ rect: CGRect) {
         axis()
@@ -89,6 +91,7 @@ class Graphics: UIView {
     }
     
     private func axis() {
+        print("Pintando axis")
         let w = bounds.width
         let h = bounds.height
         let pathy = UIBezierPath()
@@ -109,6 +112,7 @@ class Graphics: UIView {
     }
     
     private func trajectory() {
+        print("pinta trayectoria")
         //Path vacío
         let path = UIBezierPath()
         

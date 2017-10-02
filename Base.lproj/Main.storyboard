@@ -17,75 +17,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kgk-FN-Qch" customClass="Graphics" customModule="Practica2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="142"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.21192744006849315" colorSpace="calibratedRGB"/>
+                            <view contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ps8-gH-Ah3" customClass="Graphics" customModule="Practica2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="47" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqw-cy-WyD" customClass="Graphics" customModule="Practica2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="142" width="375" height="137"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.3552814640410959" colorSpace="calibratedRGB"/>
+                            <view contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="phX-cR-H9m" customClass="Graphics" customModule="Practica2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="175" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.35528146399999999" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="m2v-sb-SWM">
-                                <rect key="frame" x="25" y="606" width="314" height="31"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <action selector="sliderScale:" destination="BYZ-38-t0r" eventType="valueChanged" id="Vcc-Sn-dHi"/>
-                                    <action selector="updateTime:" destination="BYZ-38-t0r" eventType="valueChanged" id="GEV-OV-nck"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Naz-Al-Ltr">
-                                <rect key="frame" x="27" y="537" width="101" height="51"/>
+                            <view contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="meu-eD-H7L" customClass="Graphics" customModule="Practica2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="298" width="375" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLz-Cf-eaX">
-                                <rect key="frame" x="136" y="536" width="94" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNh-DB-9Y7">
-                                <rect key="frame" x="249" y="536" width="88" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJr-V6-sJ4" customClass="Graphics" customModule="Practica2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="412" width="375" height="128"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AOV-kQ-qqk" customClass="Graphics" customModule="Practica2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="420" width="375" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.35528146399999999" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vml-dg-x6U" customClass="Graphics" customModule="Practica2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="278" width="375" height="136"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.32165025684931509" colorSpace="calibratedRGB"/>
-                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="RwW-Eb-mAr">
+                                <rect key="frame" x="14" y="630" width="347" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltt-JO-QE0">
+                                <rect key="frame" x="166" y="583" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLv-ag-3If">
+                                <rect key="frame" x="284" y="583" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RIEGO AUTOMATICO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zi-rV-tCe">
+                                <rect key="frame" x="64" y="0.0" width="246" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tY6-A3-vXD">
+                                <rect key="frame" x="53" y="566" width="42" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.40000000600000002" green="1" blue="1" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="htLabel" destination="sNh-DB-9Y7" id="ENR-6U-Drs"/>
-                        <outlet property="outSpeedHeightFuncView" destination="uqw-cy-WyD" id="lpL-WN-TCc"/>
-                        <outlet property="outSpeedTimeFuncView" destination="Kgk-FN-Qch" id="rcF-uC-vJu"/>
-                        <outlet property="timeSlider" destination="m2v-sb-SWM" id="4PQ-5M-eBn"/>
-                        <outlet property="timeValue" destination="oLz-Cf-eaX" id="Vz1-0Z-pX9"/>
-                        <outlet property="trajectoryTimeFuncView" destination="lJr-V6-sJ4" id="2UY-Ov-928"/>
-                        <outlet property="updateTime" destination="m2v-sb-SWM" id="3ue-mM-y8Q"/>
-                        <outlet property="vtLabel" destination="Naz-Al-Ltr" id="k1x-kQ-BA8"/>
-                        <outlet property="waterHeightTimeFuncView" destination="Vml-dg-x6U" id="JdQ-88-U17"/>
+                        <outlet property="htLabel" destination="MLv-ag-3If" id="6uP-KH-liS"/>
+                        <outlet property="outSpeedHeightFuncView" destination="phX-cR-H9m" id="0WY-Fe-vhg"/>
+                        <outlet property="outSpeedTimeFuncView" destination="Ps8-gH-Ah3" id="VtW-pV-mlM"/>
+                        <outlet property="timeSlider" destination="RwW-Eb-mAr" id="81B-Vt-6G5"/>
+                        <outlet property="timeValue" destination="ltt-JO-QE0" id="IQq-s7-uiZ"/>
+                        <outlet property="trajectoryTimeFuncView" destination="AOV-kQ-qqk" id="ffb-9z-MzL"/>
+                        <outlet property="vtLabel" destination="tY6-A3-vXD" id="OPU-tg-7MU"/>
+                        <outlet property="waterHeightTimeFuncView" destination="meu-eD-H7L" id="cGi-XE-5Am"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bJJ-mw-GPw">
-                    <rect key="frame" x="0.0" y="0.0" width="42" height="66"/>
+                    <rect key="frame" x="0.0" y="0.0" width="744" height="66"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>

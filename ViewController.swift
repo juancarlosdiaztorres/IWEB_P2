@@ -18,11 +18,26 @@ class ViewController: UIViewController, FuncProtocol {
     @IBOutlet weak var outSpeedHeightFuncView: Graphics!
     @IBOutlet weak var waterHeightTimeFuncView: Graphics!
     @IBOutlet weak var trajectoryTimeFuncView: Graphics!
+    
     @IBOutlet weak var timeSlider: UISlider!
     
     @IBOutlet weak var vtLabel: UILabel!
     @IBOutlet weak var timeValue: UILabel!
     @IBOutlet weak var htLabel: UILabel!
+    
+    
+    
+    
+    /*@IBOutlet weak var outSpeedTimeFuncView: Graphics!
+    @IBOutlet weak var outSpeedHeightFuncView: Graphics!
+    @IBOutlet weak var waterHeightTimeFuncView: Graphics!
+    @IBOutlet weak var trajectoryTimeFuncView: Graphics!
+    @IBOutlet weak var timeSlider: UISlider!
+    
+    @IBOutlet weak var vtLabel: UILabel!
+    @IBOutlet weak var timeValue: UILabel!
+    @IBOutlet weak var htLabel: UILabel!*/
+
     
     var trajectoryTime : Double = 0.0 {
         didSet{
@@ -36,6 +51,7 @@ class ViewController: UIViewController, FuncProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Cargando vistas")
         //Conexion entre clases
         outSpeedTimeFuncView.dataSource = self
         outSpeedHeightFuncView.dataSource = self
@@ -67,6 +83,8 @@ class ViewController: UIViewController, FuncProtocol {
         trajectoryModel.originPos = (0, 2)
         trajectoryModel.targetPos = (2, 0)
         
+        timeSlider.sendActions(for: .valueChanged)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,6 +102,7 @@ class ViewController: UIViewController, FuncProtocol {
     
     //Protocolo
     func startFor(_ graphic: Graphics) -> Double {
+        print("Ha entrado en start")
         return 0.0
     }
     
