@@ -56,9 +56,9 @@ class Graphics: UIView {
         }
     }
     
-//#if TARGET_INTERFACE_BUILDER
+#if TARGET_INTERFACE_BUILDER
     var dataSource : FuncProtocol!
-/*#else
+#else
     weak var dataSource: FuncProtocol!
 #endif
     
@@ -82,7 +82,7 @@ class Graphics: UIView {
         }
         
         dataSource = FakeDataSource()
-    }*/
+    }
     
     override func draw(_ rect: CGRect) {
         axis()

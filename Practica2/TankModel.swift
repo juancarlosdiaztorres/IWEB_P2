@@ -25,8 +25,10 @@ class TankModel {
    
     
     init(){
-        areaTank = Double.pi * pow(radiousTank, 2)
-        areaPipe = Double.pi * pow(radiousPipe, 2)
+        //areaTank = Double.pi * pow(radiousTank, 2)
+        //areaPipe = Double.pi * pow(radiousPipe, 2)
+        areaTank = Double.pi*radiousTank
+        areaPipe = Double.pi*radiousPipe
         at2ap2m1 = pow(areaTank/areaPipe, 2)-1
         ap2at2m1 = pow(areaPipe/areaTank, 2)-1
         timeToEmpty = sqrt(2 * initialWaterHeight * at2ap2m1 / Constants.g)
@@ -34,13 +36,15 @@ class TankModel {
         
         //Vout(h)
         func waterOutputSpeed(waterHeight h: Double) -> Double {
-            let v = sqrt((2*Constants.g*h)/ap2at2m1)
+            //let v = sqrt((2*Constants.g*h)/ap2at2m1)
+            let v = sqrt(-2*Constants.g*h/ap2at2m1)
             return max(0.0,v)
         }
         
         //Vbajada(h) en deposito
         func waterHeightSpeed(waterHeight h: Double) -> Double {
-            let v = sqrt((2*Constants.g*h)/at2ap2m1)
+            //let v = sqrt((2*Constants.g*h)/at2ap2m1)
+            let v = sqrt(2*Constants.g*h/at2ap2m1)
             return max(v,0.0)
         }
         
@@ -57,7 +61,7 @@ class TankModel {
                 return 0
             }
             
-            let c2 = Constants.g / 2 / at2ap2m1
+            let c2 = Constants.g * 0.5 / at2ap2m1
             return c0 + c1*t + c2 * t * t
         }
 }

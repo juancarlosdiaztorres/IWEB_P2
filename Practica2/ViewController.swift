@@ -25,18 +25,6 @@ class ViewController: UIViewController, FuncProtocol {
     @IBOutlet weak var timeValue: UILabel!
     @IBOutlet weak var htLabel: UILabel!
     
-    
-    
-    
-    /*@IBOutlet weak var outSpeedTimeFuncView: Graphics!
-    @IBOutlet weak var outSpeedHeightFuncView: Graphics!
-    @IBOutlet weak var waterHeightTimeFuncView: Graphics!
-    @IBOutlet weak var trajectoryTimeFuncView: Graphics!
-    @IBOutlet weak var timeSlider: UISlider!
-    
-    @IBOutlet weak var vtLabel: UILabel!
-    @IBOutlet weak var timeValue: UILabel!
-    @IBOutlet weak var htLabel: UILabel!*/
 
     
     var trajectoryTime : Double = 0.0 {
@@ -60,28 +48,31 @@ class ViewController: UIViewController, FuncProtocol {
         
         //Escalado y etiquetado
         outSpeedTimeFuncView.scaleX = 20
-        outSpeedTimeFuncView.scaleY = 20
+        outSpeedTimeFuncView.scaleY = 40
         outSpeedTimeFuncView.textX = "Time"
         outSpeedTimeFuncView.textY = "Out Speed"
         
-        outSpeedHeightFuncView.scaleX = 100
-        outSpeedHeightFuncView.scaleY = 100
+        outSpeedHeightFuncView.scaleX = 30
+        outSpeedHeightFuncView.scaleY = 25
         outSpeedHeightFuncView.textX = "Height"
         outSpeedHeightFuncView.textY = "Out Speed"
         
-        waterHeightTimeFuncView.scaleX = 0.2
-        waterHeightTimeFuncView.scaleY = 0.2
+        waterHeightTimeFuncView.scaleX = 20
+        waterHeightTimeFuncView.scaleY = 20
         waterHeightTimeFuncView.textX = "Height"
         waterHeightTimeFuncView.textY = "Level of Water"
         
-        trajectoryTimeFuncView.scaleX = 25
-        trajectoryTimeFuncView.scaleY = 25
+        trajectoryTimeFuncView.scaleX = 20
+        trajectoryTimeFuncView.scaleY = 20
         trajectoryTimeFuncView.textX = "Time"
         trajectoryTimeFuncView.textY = "Trajectory"
         
         //Colocación tiesto y regadera
         trajectoryModel.originPos = (0, 2)
         trajectoryModel.targetPos = (2, 0)
+        
+        //La speed del trajectory he de ponerla?
+        trajectoryModel.speed = 15.0
         
         timeSlider.sendActions(for: .valueChanged)
         

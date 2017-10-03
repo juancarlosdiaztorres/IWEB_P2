@@ -50,7 +50,7 @@ class TrajectoryModel {
         let xf = targetPos.x - originPos.x
         let yf = targetPos.y - originPos.y
     
-        angle = atan((pow(speed,2) + sqrt(pow(speed,4) - g*g*xf*xf - 2*g*yf*pow(speed, 2))) / (g*xf))
+        angle = atan((pow(speed,2) + sqrt(pow(speed,4) - g*g*xf*xf - 2*g*yf*speed*speed)) / (g*xf))
     
         if !angle.isNormal {
             speedX = 0
