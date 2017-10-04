@@ -47,32 +47,32 @@ class ViewController: UIViewController, FuncProtocol {
         trajectoryTimeFuncView.dataSource = self
         
         //Escalado y etiquetado
-        outSpeedTimeFuncView.scaleX = 20
-        outSpeedTimeFuncView.scaleY = 40
+        outSpeedTimeFuncView.scaleX = 1 //Estan bien pero bajan lento
+        outSpeedTimeFuncView.scaleY = 50
         outSpeedTimeFuncView.textX = "Time"
         outSpeedTimeFuncView.textY = "Out Speed"
         
-        outSpeedHeightFuncView.scaleX = 30
-        outSpeedHeightFuncView.scaleY = 25
+        outSpeedHeightFuncView.scaleX = 120 //Estan bien
+        outSpeedHeightFuncView.scaleY = 50
         outSpeedHeightFuncView.textX = "Height"
         outSpeedHeightFuncView.textY = "Out Speed"
         
-        waterHeightTimeFuncView.scaleX = 20
-        waterHeightTimeFuncView.scaleY = 20
+        waterHeightTimeFuncView.scaleX = 1 //OK
+        waterHeightTimeFuncView.scaleY = 70
         waterHeightTimeFuncView.textX = "Height"
         waterHeightTimeFuncView.textY = "Level of Water"
         
-        trajectoryTimeFuncView.scaleX = 20
+        trajectoryTimeFuncView.scaleX = 50 //OK
         trajectoryTimeFuncView.scaleY = 20
-        trajectoryTimeFuncView.textX = "Time"
+        trajectoryTimeFuncView.textX = "X"
         trajectoryTimeFuncView.textY = "Trajectory"
         
         //Colocación tiesto y regadera
-        trajectoryModel.originPos = (0, 2)
+        trajectoryModel.originPos = (0, 2.5)
         trajectoryModel.targetPos = (2, 0)
         
         //La speed del trajectory he de ponerla?
-        trajectoryModel.speed = 15.0
+        trajectoryModel.speed = 1.0
         
         timeSlider.sendActions(for: .valueChanged)
         
