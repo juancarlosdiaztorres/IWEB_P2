@@ -69,10 +69,10 @@ class ViewController: UIViewController, FuncProtocol {
         
         //Colocación tiesto y regadera
         trajectoryModel.originPos = (0, 2.5)
-        trajectoryModel.targetPos = (2, 0)
+        trajectoryModel.targetPos = (1, 0)
         
         //La speed del trajectory he de ponerla?
-        trajectoryModel.speed = 1.0
+        trajectoryModel.speed = 15.0
         
         timeSlider.sendActions(for: .valueChanged)
         

@@ -117,15 +117,21 @@ class Graphics: UIView {
         let path = UIBezierPath()
         
         //Posicionamiento
-        let h = bounds.height
-        let w = bounds.width
-        path.move(to: CGPoint(x: w/2, y: h/2))
+        //let h = Double(bounds.height)
+        let w = Double(bounds.size.width)
+        
         
         //Variables path (0, 200 y rango)
         let P0 = dataSource.startFor(self)
         let PF = dataSource.endFor(self)
+        let delta = max((PF-P0) / w, 0.001)
+        var pos = dataSource.nextPoint(self, pointAt: P0)
+        var x = scalingX(pos.x)
+        var y = scalingY(pos.y)
+        path.move(to: CGPoint(x: x, y: y))
+        
 
-        for p in stride(from: P0, to: PF, by: 0.1) {
+        for p in stride(from: P0, to: PF, by: delta) {
         
             let v = dataSource.nextPoint(self, pointAt: p)
             let x = scalingX(v.x)
@@ -146,8 +152,8 @@ class Graphics: UIView {
 }
     
     private func scalingX(_ scaleInX : Double) ->Double {
-        let weight = Double(bounds.width)
-        return ((weight/2) + (scaleInX*scaleX))
+        let width = Double(bounds.width)
+        return ((width/2) + (scaleInX*scaleX))
         
     }
     
